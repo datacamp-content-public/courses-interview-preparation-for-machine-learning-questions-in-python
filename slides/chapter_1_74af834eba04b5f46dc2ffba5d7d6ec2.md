@@ -46,19 +46,43 @@ Output: 164.637
 
 
 ---
-## Imagine the best estimate
+## Introducing Null RMSE
 
 ```yaml
-type: "TwoColumns"
-key: "5853c4f3fb"
+type: "FullSlide"
+key: "0118f387bd"
 ```
 
 `@part1`
-Mean?
+Imagine your dataset does not contain any input variables. How will you predict the number of bikes rented?
 
 
-`@part2`
-Median?
+`@script`
+
+
+
+---
+## Predicting the mean
+
+```yaml
+type: "FullSlide"
+key: "f6c3b2de0b"
+```
+
+`@part1`
+In this situation, your best guess would be the mean. For all the different time periods, you will always be predicting the mean response value.
+
+```python
+# split X and y into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=3)
+
+# create a NumPy array with the same shape as y_test
+y_null = np.zeros_like(y_test, dtype=float)
+
+# fill the array with the mean value of y_test
+y_null.fill(y_test.mean())
+y_null
+```
 
 
 `@script`
