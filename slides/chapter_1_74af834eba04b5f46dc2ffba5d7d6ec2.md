@@ -72,6 +72,21 @@ key: "f6c3b2de0b"
 `@part1`
 In this situation, your best guess would be the mean. For all the different time periods, you will always be predicting the mean response value.
 
+
+`@script`
+
+
+
+---
+## Calculate the mean response value
+
+```yaml
+type: "FullSlide"
+key: "a3a5996483"
+```
+
+`@part1`
+We create an array y_null that has predicted the no.of bikes rented for all the test samples to be the mean
 ```python
 # split X and y into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=3)
@@ -98,7 +113,7 @@ key: "fff65c249c"
 ```
 
 `@part1`
-Now calculate the RMSE value of this stupid model which always predicts the output to be the mean number of bikes rented.
+Now let us calculate the RMSE value of this stupid model which always predicts the output to be the mean number of bikes rented.
 ```python
 # fill the array with the mean value of y_test
 y_null.fill(y_test.mean())
