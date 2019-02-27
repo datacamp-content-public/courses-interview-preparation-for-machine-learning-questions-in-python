@@ -44,7 +44,7 @@ This is an example exercise.
 
 ---
 
-## Null RMSE
+## Benchmarking your model
 
 ```yaml
 type: VideoExercise

@@ -12,8 +12,8 @@ key: "cdd8593aee"
 
 `@lower_third`
 
-name: 
-title: undefined
+name: Sai Charan Tej
+title: 
 
 
 `@script`
@@ -26,10 +26,19 @@ title: undefined
 ```yaml
 type: "FullSlide"
 key: "4668c301c5"
+hide_title: false
 ```
 
 `@part1`
-Now that you have the accuracy calculated for your model, the RMSE value
+Interviewer:The RMSE value of your base model is 164.65. 
+```python
+base_model_performance = train_test_eval(['temp'])
+print (base_model_performance)
+``` 
+Output: 164.637
+
+- Does the above RMSE value represent a good model or a below-average model? 
+- How do you benchmark it?
 
 
 `@script`
