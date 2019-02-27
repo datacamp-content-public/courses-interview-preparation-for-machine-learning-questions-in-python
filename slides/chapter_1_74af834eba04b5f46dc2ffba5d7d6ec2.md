@@ -122,7 +122,7 @@ y_null
 null_error = np.sqrt(metrics.mean_squared_error(y_test, y_null))
 print (null_error)
 ```
-null_error represents how well(bad!) the model would be behaving in the absence of input variables
+**null_error** represents how well(bad!) the model would be behaving in the absence of input variables
 
 
 `@script`
@@ -138,14 +138,14 @@ key: "16e00dbbc0"
 ```
 
 `@part1`
-Now you can compare the RMSE value of your base model against the null_error.
+Now you can compare the **RMSE value of your base model** against the **null_error**.
 ```python
 if base_model_performance < null_error:
    print ('Your model is better than a random prediction')
 else:
    print ('Your model is worse than a random prediction')
 ```
-> If the base model RMSE is more than that of null_error, then your model is no good than a stupid model which always predicted the mean value (you are actually making it worse by deploying Machine Learning).
+> If the base model RMSE is **more than that** of null_error, then your model is no good than a stupid model which always predicted the mean value (you are actually making it worse by deploying Machine Learning).
 
 
 `@script`
@@ -161,7 +161,7 @@ key: "28f258b8d7"
 ```
 
 `@part1`
-# You should always strive to build models whose RMSE value is less than the Null RMSE value for the model
+# You should always strive to build models whose RMSE value is less than the Null RMSE value for the model!
 
 
 `@script`
