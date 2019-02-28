@@ -1,5 +1,5 @@
 ---
-title: 'Chapter Title Here'
+title: 'Evaluating your model'
 description: 'Chapter description goes here.'
 free_preview: true
 ---
@@ -14,7 +14,7 @@ xp: 100
 skills: 2
 ```
 
-This is an example exercise.
+How do you evaluate your model?
 
 `@instructions`
 
