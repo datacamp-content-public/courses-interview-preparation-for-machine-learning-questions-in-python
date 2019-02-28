@@ -13,7 +13,7 @@ key: "cdd8593aee"
 `@lower_third`
 
 name: Sai Charan Tej
-title: 
+title: Product Manager
 
 
 `@script`
