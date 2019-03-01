@@ -134,6 +134,24 @@ Central Tendency states that majority of values in a distribution lie around the
 
 
 ---
+## What is Null RMSE?
+
+```yaml
+type: "FullSlide"
+key: "a325fd6176"
+```
+
+`@part1`
+Null RMSE is the RMSE of the model that always predicts the mean value for the input training samples. 
+
+In our case, we calculate null RMSE by taking the difference between the average number of bikes rented per hour (predicted value) and the actual bikes rented per hour
+
+
+`@script`
+
+
+
+---
 ## Calculate Null RMSE
 
 ```yaml
@@ -148,7 +166,9 @@ Below are the steps:
 
 2.Calculate the Average Number of Bikes Rented every Hour for the test data. This becomes your prediction.
 
-3.Calculate the RMSE value by taking into consideration these predictions
+3.Calculate the Null RMSE value by taking into consideration these predictions
+
+4.Verify if your base model's RMSE value is lower than Null RMSE
 
 
 `@script`
