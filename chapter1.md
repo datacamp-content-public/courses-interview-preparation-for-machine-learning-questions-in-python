@@ -54,3 +54,23 @@ xp: 50
 
 `@projector_key`
 74af834eba04b5f46dc2ffba5d7d6ec2
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: PureMultipleChoiceExercise
+key: 8e3d3a581f
+xp: 50
+```
+
+
+
+`@hint`
+
+
+`@possible_answers`
+
+
+`@feedback`

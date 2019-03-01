@@ -37,8 +37,8 @@ print (base_model_performance)
 ``` 
 Output: 164.637
 
-- Does the above RMSE value represent a good model or a below-average model? 
-- How do you benchmark it?
+- Does the above RMSE value represent a good model or a below-average model? {{1}}
+- How do you benchmark it? {{2}}
 
 
 `@script`
@@ -46,15 +46,69 @@ Output: 164.637
 
 
 ---
-## Introducing Null RMSE
+## Exercise
 
 ```yaml
 type: "FullSlide"
-key: "0118f387bd"
+key: "2a96d7ae22"
 ```
 
 `@part1`
-Imagine your dataset does not contain any input variables. How will you predict the number of bikes rented?
+I will benchmark my model by comparing my model's RMSE with the RMSE of:
+
+a.A new model with a different set of input features {{1}} 
+
+b.A model that always predicted the average {{2}}
+
+c.A model that always predicted the correct value {{3}}
+
+d.A model that always predicted the wrong value {{4}}
+
+**Answer: b** {{5}}
+
+
+`@script`
+
+
+
+---
+## What exactly is model benchmarking?
+
+```yaml
+type: "FullSlide"
+key: "54d7dc43dc"
+```
+
+`@part1`
+Benchmarking a model corresponds to understanding how a model would predict the output in the absence of input features.
+
+The performance of this model, a stupid model, represents the best a model can do in predicting the output without the help of input features.
+
+
+`@script`
+
+
+
+---
+## Scenario
+
+```yaml
+type: "FullSlide"
+key: "b00e10b99a"
+```
+
+`@part1`
+Imagine you just have details about the no.of bikes rented every hour. If you are to tell the owner of the bikestore, the number of bikes that are going to be rented in the next hour, which of the below estimates might come to your rescue?
+
+a.Random Guess
+
+b.Average number of bikes rented per hour
+
+c.Max number of bikes rented per hour
+
+d.Min number of bikes rented per hour
+
+**Answer: b **
 
 
 `@script`
@@ -71,6 +125,43 @@ key: "f6c3b2de0b"
 
 `@part1`
 In this situation, your best guess would be the mean. For all the different time periods, you will always be predicting the mean response value.
+
+
+`@script`
+
+
+
+---
+## What do you mean by benchmarking?
+
+```yaml
+type: "FullSlide"
+key: "0118f387bd"
+```
+
+`@part1`
+Here is our dataset. Total is the output variable and we have a collection of input variables
+![https://assets.datacamp.com/production/repositories/4715/datasets/729689b6177979d98c475abe3fc6dd8abe88c071/Bike-Dataset.png](https://assets.datacamp.com/production/repositories/4715/datasets/729689b6177979d98c475abe3fc6dd8abe88c071/Bike-Dataset.png)
+
+
+`@script`
+
+
+
+---
+## Now imagine we do not have any input variables..
+
+```yaml
+type: "TwoColumns"
+key: "b77fec0707"
+```
+
+`@part1`
+![](https://assets.datacamp.com/production/repositories/4715/datasets/729689b6177979d98c475abe3fc6dd8abe88c071/Bike-Dataset.png)
+
+
+`@part2`
+Median
 
 
 `@script`
