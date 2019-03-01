@@ -124,7 +124,9 @@ key: "f6c3b2de0b"
 ```
 
 `@part1`
-In this situation, your best guess would be the mean. For all the different time periods, you will always be predicting the mean response value.
+In this situation, your best guess would be the mean. For all the different time slots, you will always be predicting the mean response value. Why?
+
+Central Tendency states that majority of values in a distribution lie around the center. So, it would make a lot of sense if you recommend the average number of bikes to the bikestore owner when you do not have any input features at your disposal.
 
 
 `@script`
@@ -132,36 +134,21 @@ In this situation, your best guess would be the mean. For all the different time
 
 
 ---
-## What do you mean by benchmarking?
+## Calculate Null RMSE
 
 ```yaml
 type: "FullSlide"
-key: "0118f387bd"
+key: "cf60a44c5a"
 ```
 
 `@part1`
-Here is our dataset. Total is the output variable and we have a collection of input variables
-![https://assets.datacamp.com/production/repositories/4715/datasets/729689b6177979d98c475abe3fc6dd8abe88c071/Bike-Dataset.png](https://assets.datacamp.com/production/repositories/4715/datasets/729689b6177979d98c475abe3fc6dd8abe88c071/Bike-Dataset.png)
+Below are the steps:
 
+1.Split the data into training data and test data
 
-`@script`
+2.Calculate the Average Number of Bikes Rented every Hour for the test data. This becomes your prediction.
 
-
-
----
-## Now imagine we do not have any input variables..
-
-```yaml
-type: "TwoColumns"
-key: "b77fec0707"
-```
-
-`@part1`
-![](https://assets.datacamp.com/production/repositories/4715/datasets/729689b6177979d98c475abe3fc6dd8abe88c071/Bike-Dataset.png)
-
-
-`@part2`
-Median
+3.Calculate the RMSE value by taking into consideration these predictions
 
 
 `@script`
