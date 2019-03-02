@@ -312,7 +312,7 @@ key: "28f258b8d7"
 `@part1`
 In order to benchmark your model, you need to:
 
-1.Build a stupid model which predicts the output in the absence of input features {{1}}
+1.Build a stupid model which predicts the output in the absence of input features using central tendency measures{{1}}
 
 2.Calculate the Null RMSE for this stupid model {{2}}
 
