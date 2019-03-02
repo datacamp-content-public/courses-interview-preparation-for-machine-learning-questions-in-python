@@ -178,7 +178,7 @@ Below are the steps to benchmark your model:
 
 
 `@script`
-Now that we know how a stupid model makes predictions, let us formally define the process for benchmarking.
+Now that we know how a stupid model makes predictions, let us formally define the process for benchmarking.These are the 4 steps in the benchmarking process. Let us look at each of the steps in detail.
 
 
 ---
