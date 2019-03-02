@@ -90,7 +90,7 @@ key: "5a78ebdebb"
 
 `@script`
 What is model benchmarking?
-You compare your model’s performance with that of a stupid model. What is a stupid model? A model that tries to predict without considering input features. I call this model stupid, since it is practically making predictions without data.
+You compare your model’s performance with that of a stupid model. What is a stupid model? A model that tries to predict without considering input features. I call this model stupid, since it is practically making predictions without data.You calculate the RMSE of this stupid model, called as null RMSE. and always ensure that your machine learning models have a lower RMSE than this null RMSE.
 
 
 ---
