@@ -369,6 +369,10 @@ key: "afbf7fb867"
 `@part2`
 B. My model is a below-average model
 
+Your base model RMSE: 164.63
+
+Null RMSE: 190.732
+
 
 `@script`
 
