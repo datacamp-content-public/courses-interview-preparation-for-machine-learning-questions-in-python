@@ -125,8 +125,6 @@ c.A model that always predicted the correct value {{3}}
 
 d.A model that always predicted the wrong value {{4}}
 
-**Answer: b** {{5}}
-
 
 `@script`
 
@@ -142,23 +140,6 @@ key: "fd5681da11"
 
 `@part1`
 ![](https://assets.datacamp.com/production/repositories/4715/datasets/de426914547a8980eddb150374b758d26553d0ee/output.png)
-
-
-`@script`
-
-
-
----
-## A question for you
-
-```yaml
-type: "FullSlide"
-key: "41cb40e812"
-hide_title: false
-```
-
-`@part1`
-# How should a model predict the hourly bikes rented when there are no input features?
 
 
 `@script`
@@ -195,22 +176,28 @@ d.Min number of bikes rented per hour
 ## Predicting the mean
 
 ```yaml
-type: "FullSlide"
-key: "f6c3b2de0b"
+type: "TwoColumns"
+key: "6e6a7d7210"
 ```
 
 `@part1`
-In this situation, your best guess would be the mean. For all the different time slots, you will always be predicting the mean response value. Why?
+- In this situation,predicting the mean makes a lot of sense. Why?
 
-Central Tendency states that majority of values in a distribution lie around the center. So, it would make a lot of sense if you recommend the average number of bikes to the bikestore owner when you do not have any input features at your disposal.
+- Central Tendency states that majority of values in a distribution lie around the center. 
+
+- So, you recommend the average number of bikes to the bikestore owner when you do not have any input features at your disposal.
+
+
+`@part2`
+![](https://assets.datacamp.com/production/repositories/4715/datasets/31602aabca0fa5fb0ddd86bcff7bd91c2f2c0d82/central-tendency-copy.jpg)
 
 
 `@script`
-
+For all the different time slots, you will always be predicting the mean response value.
 
 
 ---
-## What is Null RMSE?
+## Null RMSE
 
 ```yaml
 type: "FullSlide"
@@ -228,7 +215,7 @@ In our case, we calculate null RMSE by taking the difference between the average
 
 
 ---
-## Calculate Null RMSE
+## Benchmarking
 
 ```yaml
 type: "FullSlide"
@@ -236,7 +223,7 @@ key: "cf60a44c5a"
 ```
 
 `@part1`
-Below are the steps:
+Below are the steps to benchmark your model:
 
 1.Split the data into training data and test data
 
@@ -252,7 +239,26 @@ Below are the steps:
 
 
 ---
-## Calculate the mean response value
+## Step 1: Split the data into training and test data
+
+```yaml
+type: "FullSlide"
+key: "2928632209"
+```
+
+`@part1`
+```python
+# split X and y into training and testing sets
+X_train, X_test, y_train, y_test = 
+train_test_split(X, y, random_state=3)```
+
+
+`@script`
+
+
+
+---
+## Step 2: Calculate the mean response value
 
 ```yaml
 type: "FullSlide"
@@ -260,11 +266,8 @@ key: "a3a5996483"
 ```
 
 `@part1`
-We create an array y_null that has predicted the no.of bikes rented for all the test samples to be the mean
+We create and fill an array **y_null** with the average number of bikes rented per hour
 ```python
-# split X and y into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=3)
-
 # create a NumPy array with the same shape as y_test
 y_null = np.zeros_like(y_test, dtype=float)
 
@@ -279,7 +282,7 @@ y_null
 
 
 ---
-## Calculate RMSE
+## Step 3: Calculate Null RMSE
 
 ```yaml
 type: "FullSlide"
@@ -291,12 +294,13 @@ Now let us calculate the RMSE value of this stupid model which always predicts t
 ```python
 # fill the array with the mean value of y_test
 y_null.fill(y_test.mean())
-y_null
 # compute null RMSE
-null_error = np.sqrt(metrics.mean_squared_error(y_test, y_null))
-print (null_error)
+null_rmse = np.sqrt(metrics.mean_squared_error(y_test, y_null))
+print (null_rmse)
 ```
-**null_error** represents how well(bad!) the model would be behaving in the absence of input variables
+Output: 190.732
+
+**null_rmse** represents how well(bad!) the model would be behaving in the absence of input variables
 
 
 `@script`
@@ -304,7 +308,7 @@ print (null_error)
 
 
 ---
-## Benchmark your model against Null RMSE
+## Step 4: Benchmark your model against Null RMSE
 
 ```yaml
 type: "FullSlide"
@@ -312,12 +316,12 @@ key: "16e00dbbc0"
 ```
 
 `@part1`
-Now you can compare the **RMSE value of your base model** against the **null_error**.
+Now you can compare the **RMSE value of your base model** against the **null_rmse**.
 ```python
-if base_model_performance < null_error:
-   print ('Your model is better than a random prediction')
+if base_model_performance < null_rmse:
+ print('Your model is better than a stupid model')
 else:
-   print ('Your model is worse than a random prediction')
+ print('Your model is worse than a stupid model')
 ```
 > If the base model RMSE is **more than that** of null_error, then your model is no good than a stupid model which always predicted the mean value (you are actually making it worse by deploying Machine Learning).
 
