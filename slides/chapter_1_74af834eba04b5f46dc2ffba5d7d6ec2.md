@@ -43,34 +43,6 @@ Just how good is your model? That is what the interviewer asks. How do you inter
 
 
 ---
-## Choose an option
-
-```yaml
-type: "TwoRows"
-key: "16956ca850"
-```
-
-`@part1`
-```python
-rmse_base_model = train_test_eval(['temp'])
-print (rmse_base_model)
-``` 
-Output: 164.637
-
-
-`@part2`
-A. My model is a good model {{1}}
-
-B. My model is a below-average model {{2}}
-
-Let us find out whether your model is indeed a good model or not by benchmarking your model!!{{3}}
-
-
-`@script`
-164.63 is your base model's RMSE. Let us find out whether your model is indeed a good model or not by benchmarking.
-
-
----
 ## What exactly is model benchmarking?
 
 ```yaml
@@ -111,7 +83,7 @@ Let us take a scenario. You have to predict the total rentals without the help f
 
 
 ---
-## Making a prediction in the absence of features
+## How does a stupid model predict?
 
 ```yaml
 type: "FullSlide"
@@ -264,34 +236,11 @@ if rmse_base_model < null_rmse:
 else:
  print('Your model is worse than a stupid model')
 ```
+**Output:** You model is better than a stupid model
 
 
 `@script`
 If the base model RMSE is **more than that** of null_error, then your model is no good than a stupid model which always predicted the mean value (you are actually making it worse by using Machine Learning).
-
-
----
-## What do you think about your model?
-
-```yaml
-type: "TwoRows"
-key: "afbf7fb867"
-```
-
-`@part1`
-**A. My model is a good model**
-
-
-`@part2`
-B. My model is a below-average model
-
-Your base model RMSE: 164.63 {{1}}
-
-Null RMSE: 190.732 {{2}}
-
-
-`@script`
-Coming back to the question at the start of the lesson, is your model good or bad, we find the null rmse value to 190.732 and since your base_model rmse is less than that of null rmse, you can proudly conclude that your model is a good model.
 
 
 ---
