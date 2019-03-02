@@ -277,6 +277,30 @@ Finally, you verify if your base model’s RMSE is lower than null RMSE or not. 
 
 
 ---
+## Exercise - Solution
+
+```yaml
+type: "FullSlide"
+key: "bfe4077f6e"
+```
+
+`@part1`
+I will benchmark my model by comparing my model's RMSE with the RMSE of:
+
+a.A new model with a different set of input features  
+
+**b.A model that always predicted the average **
+
+c.A model that always predicted the correct value 
+
+d.A model that always predicted the wrong value
+
+
+`@script`
+
+
+
+---
 ## Summary
 
 ```yaml
@@ -299,30 +323,6 @@ To summarize, in this lesson we have learnt how you can benchmark your machine l
 1.We first build a stupid model that makes predictions without input features
 2.We then calculate the RMSE value of this stupid model.
 3.Verify whether your base model is better than this stupid model or not.
-
-
----
-## Exercise - Solution
-
-```yaml
-type: "FullSlide"
-key: "bfe4077f6e"
-```
-
-`@part1`
-I will benchmark my model by comparing my model's RMSE with the RMSE of:
-
-a.A new model with a different set of input features  
-
-**b.A model that always predicted the average **
-
-c.A model that always predicted the correct value 
-
-d.A model that always predicted the wrong value
-
-
-`@script`
-
 
 
 ---
