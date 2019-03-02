@@ -155,7 +155,7 @@ key: "6e6a7d7210"
 
 `@script`
 Why is the mean a good prediction?
-Central tendency. According to central tendency, majority of the values in a distribution lie around the center. In the absence of input features, a central tendency measure like mean is your best bet.
+Central tendency. According to central tendency, majority of the values in a distribution lie around the center. In the absence of input features, a central tendency measure like mean is your best prediction.This is how a stupid model predicts the output.
 
 
 ---
@@ -179,7 +179,7 @@ Below are the steps to benchmark your model:
 
 
 `@script`
-Now that we have built a stupid model, let us lay down the process for benchmarking your base model.
+Now that we have built a stupid model, let us define the process for benchmarking your base model.
 You first split the data into training and testing data.
 Build a stupid model with the mean value of bikes rented as its prediction
 Calculate Null RMSE value with this prediction
@@ -274,7 +274,7 @@ else:
 
 
 `@script`
-Finally, you verify if your base model’s RMSE is lower than null RMSE or not. If it is lower, then your model is a good model. If it is not, you have built a model so bad that you are better off not building a model in the first-place.
+Finally, you verify if your base model’s RMSE is lower than null RMSE or not. If it is lower, then Congratulations! your model is a good model.You have used machine learning to better predict the output. If it is not, then you have built a model so bad that you are better off not building a model in the first-place.This is how you benchmark your base_model.
 
 
 ---
