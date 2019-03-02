@@ -111,7 +111,7 @@ key: "fd5681da11"
 
 
 ---
-## Making a prediction in the absence of input features
+## Making a prediction in the absence of features
 
 ```yaml
 type: "FullSlide"
@@ -119,7 +119,7 @@ key: "b00e10b99a"
 ```
 
 `@part1`
-If you are to tell the owner of the bikestore, the number of bikes that are going to be rented in the next hour, which of the below estimates might come to your rescue?
+If you are to tell the owner of the bikestore, the number of bikes that are going to be rented in the next hour, which of the below estimates will you use?
 
 a.Random Guess {{1}}
 
@@ -137,7 +137,7 @@ d.Min number of bikes rented per hour {{4}}
 
 
 ---
-## Predicting the mean
+## Why does predicting the mean make sense?
 
 ```yaml
 type: "TwoColumns"
@@ -145,15 +145,12 @@ key: "6e6a7d7210"
 ```
 
 `@part1`
-- In this situation,predicting the output to be the average number of bikes rented per hour makes a lot of sense. {{1}}
-
-- Why? {{2}}
-
-- Central Tendency states that majority of values in a distribution lie around the center. {{3}}
+- Central Tendency states that majority of values in a distribution lie around the center. {{1}}
+- This is the best prediction you can make in the absence of input features {{2}}
 
 
 `@part2`
-![](https://assets.datacamp.com/production/repositories/4715/datasets/31602aabca0fa5fb0ddd86bcff7bd91c2f2c0d82/central-tendency-copy.jpg)
+![](https://assets.datacamp.com/production/repositories/4715/datasets/31602aabca0fa5fb0ddd86bcff7bd91c2f2c0d82/central-tendency-copy.jpg){{1}}
 
 
 `@script`
