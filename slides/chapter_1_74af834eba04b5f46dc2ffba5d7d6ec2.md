@@ -17,7 +17,7 @@ title: Product Manager
 
 
 `@script`
-In the previous lesson, you have learnt how to check for overfitting in your model. In this lesson, we are going to answer one of the basic ML Interview questions - How do you benchmark your model?
+In the previous lesson, you have learnt how to check for overfitting in your model. Now in this lesson, we are going to answer one of the basic ML Interview questions - How do you benchmark your model?
 
 
 ---
@@ -41,7 +41,7 @@ d.A model that always predicted the wrong value
 
 
 `@script`
-Choose an option and I will reveal the answer at the end of the lesson.
+I want you to look at this exercise, choose an answer and I'm going to reveal the answer at the end of the lesson
 
 
 ---
@@ -65,7 +65,7 @@ Let us find out by benchmarking your model! {{3}}
 
 
 `@script`
-The interviewer looks at the RMSE value of your base model and asks "Just how good is your model? Does the RMSE value represent a good model or an average model?"" You answer this question by benchmarking your model!
+The interviewer looks at the RMSE value of your base model and asks you "How good really is your model? Does the RMSE value represent a good model or an average model?"" You answer this question by performing model benchmarking!
 
 
 ---
@@ -90,7 +90,7 @@ key: "5a78ebdebb"
 
 `@script`
 What is model benchmarking?
-You compare your model’s performance with that of a stupid model. What is a stupid model? A model that tries to predict without considering input features. I call this model stupid, since it is practically making predictions without data.You calculate the RMSE of this stupid model, called as null RMSE. and always ensure that your machine learning models have a lower RMSE than this null RMSE.
+You compare your model’s performance with that of a stupid model. Now what is a stupid model? A model that predicts the output without considering input features. I call this model stupid, since it is practically trying to make predictions without considering data.You calculate the RMSE of this stupid model,that is called null RMSE. Any machine learning model you build should always have its RMSE value lower than null RMSE for regression problems.Now you must be wondering, how does a stupid model make predictions?
 
 
 ---
@@ -106,7 +106,7 @@ key: "fd5681da11"
 
 
 `@script`
-Now how do you build a stupid model? Assume that you are trying to predict the total bike rentals in an hour without the help of any of these input features.
+Let us find out. How do you make predictions about the total no.of bikes rented when you do not have access to any of the input features?
 
 
 ---
@@ -132,8 +132,7 @@ d.Min number of bikes rented per hour
 
 
 `@script`
-You have to make a prediction and tell the bikestore owner. Which of these options will you choose?
-Your prediction should be the average number of bikes rented per hour.
+If you are to go to the bikestore owner and come up with a prediction about the number of bikes that are going to be rented in the next hour, which of these measures would you choose? You should choose option B - average no.of bikes rented per hour.
 
 
 ---
@@ -154,8 +153,8 @@ key: "6e6a7d7210"
 
 
 `@script`
-Why is the mean a good prediction?
-Central tendency. According to central tendency, majority of the values in a distribution lie around the center. In the absence of input features, a central tendency measure like mean is your best prediction.This is how a stupid model predicts the output.
+Now you must be thinking why does predicting the mean make sense?Why is the mean a good prediction?
+Central tendency. According to central tendency, majority of the values in a distribution lie around the center and in the absence of input features, a central tendency measure like mean is your best bet.This is exactly what a stupid model does. It chooses a central tendency measure like average as its prediction.
 
 
 ---
@@ -179,11 +178,7 @@ Below are the steps to benchmark your model:
 
 
 `@script`
-Now that we have built a stupid model, let us define the process for benchmarking your base model.
-You first split the data into training and testing data.
-Build a stupid model with the mean value of bikes rented as its prediction
-Calculate Null RMSE value with this prediction
-Verify whether your base model’s RMSE value is lower than Null RMSE or not.
+Now that we know how a stupid model makes predictions, let us formally define the process for benchmarking.
 
 
 ---
@@ -321,7 +316,7 @@ In order to benchmark your model, you need to:
 
 `@script`
 To summarize, in this lesson we have learnt how you can benchmark your machine learning model:
-1.We first build a stupid model that makes predictions without input features
+1.We first build a stupid model that makes predictions without input features using central tendency measures
 2.We then calculate the RMSE value of this stupid model.
 3.Verify whether your base model is better than this stupid model or not.
 
