@@ -51,31 +51,19 @@ key: "16956ca850"
 ```
 
 `@part1`
-A. My model is a good model
-
-
-`@part2`
-B. My model is a below-average model
-
-
-`@script`
-
-
-
----
-## Let us find out if your base model is indeed a good one or not
-
-```yaml
-type: "FullSlide"
-key: "db152dc7f4"
-```
-
-`@part1`
 ```python
 rmse_base_model = train_test_eval(['temp'])
 print (rmse_base_model)
 ``` 
 Output: 164.637
+
+
+`@part2`
+A. My model is a good model {{1}}
+
+B. My model is a below-average model {{2}}
+
+Let us find out if your model is indeed a good model or not! {{3}}
 
 
 `@script`
