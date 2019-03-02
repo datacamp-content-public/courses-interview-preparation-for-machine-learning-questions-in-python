@@ -173,24 +173,6 @@ For all the different time slots, you will always be predicting the mean respons
 
 
 ---
-## Null RMSE
-
-```yaml
-type: "FullSlide"
-key: "a325fd6176"
-```
-
-`@part1`
-Null RMSE is the RMSE of the model that always predicts the mean value for the input training samples. 
-
-![](https://assets.datacamp.com/production/repositories/4715/datasets/aed6d82369d2c4054c747d8764dd5b829784187e/nullrmse.png) {{1}}
-
-
-`@script`
-
-
-
----
 ## Benchmarking
 
 ```yaml
