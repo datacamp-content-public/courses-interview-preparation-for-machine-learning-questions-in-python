@@ -51,11 +51,11 @@ key: "16956ca850"
 ```
 
 `@part1`
-# A. My model is a good model
+A. My model is a good model
 
 
 `@part2`
-# B. My model is a below-average model
+B. My model is a below-average model
 
 
 `@script`
@@ -331,7 +331,27 @@ else:
 
 
 ---
-## Takeaway
+## What do you think about your model?
+
+```yaml
+type: "TwoRows"
+key: "afbf7fb867"
+```
+
+`@part1`
+**A. My model is a good model**
+
+
+`@part2`
+B. My model is a below-average model
+
+
+`@script`
+
+
+
+---
+## Summary
 
 ```yaml
 type: "FullSlide"
@@ -339,7 +359,13 @@ key: "28f258b8d7"
 ```
 
 `@part1`
-# You should always strive to build models whose RMSE value is less than the Null RMSE value for the model!
+In order to benchmark your model, you need to:
+
+1.Build a stupid model which makes predictions in the absence of input features
+
+2.Calculate the Null RMSE for this stupid model
+
+3.Verify whether your base model's RMSE is above or below the Null RMSE
 
 
 `@script`
