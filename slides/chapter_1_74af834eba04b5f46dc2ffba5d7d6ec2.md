@@ -29,13 +29,13 @@ key: "84f6b5b099"
 ```
 
 `@part1`
-Interviewer:The RMSE value of your base model is 164.637 
+Interviewer:The RMSE value of your base model is 164.637 {{1}}
 
-**Does this RMSE value represent a good model or a below-average model?**
+**Does this RMSE value represent a good model or a below-average model?** {{2}}
 
 
 `@part2`
-![](https://assets.datacamp.com/production/repositories/4715/datasets/ec28afc57ce07e13b522943efdb57104fe8a1c7c/benchmark.jpg)
+![](https://assets.datacamp.com/production/repositories/4715/datasets/ec28afc57ce07e13b522943efdb57104fe8a1c7c/benchmark.jpg){{2}}
 
 
 `@script`
@@ -86,14 +86,20 @@ Output: 164.637
 ## What exactly is model benchmarking?
 
 ```yaml
-type: "FullSlide"
-key: "54d7dc43dc"
+type: "TwoColumns"
+key: "5a78ebdebb"
 ```
 
 `@part1`
-You compare your base model's performance with that of a model that predicts the output without the help of input features.
+- You compare your base model's performance with that of a (**stupid**) model that predicts the output without the help of input features. {{1}}
 
-Any machine learning model you build should do better than this stupid model. This is how you benchmark your model.
+- The RMSE of this stupid model is called 'Null RMSE' {{2}}
+
+- Any machine learning model you build should do better than this stupid model. {{3}}
+
+
+`@part2`
+![](https://assets.datacamp.com/production/repositories/4715/datasets/3ac7f429f4b159a6ba51d31dc9a5e3458285d25b/benchmark-rmse.jpg){{2}}
 
 
 `@script`
