@@ -43,7 +43,7 @@ Just how good is your model? That is what the interviewer asks. How do you inter
 
 
 ---
-## What do you think about your model's performance?
+## Choose an option
 
 ```yaml
 type: "TwoRows"
