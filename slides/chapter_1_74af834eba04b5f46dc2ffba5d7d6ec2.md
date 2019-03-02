@@ -347,7 +347,7 @@ if base_model_performance < null_rmse:
 else:
  print('Your model is worse than a stupid model')
 ```
-> If the base model RMSE is **more than that** of null_error, then your model is no good than a stupid model which always predicted the mean value (you are actually making it worse by deploying Machine Learning).
+> If the base model RMSE is **more than that** of null_error, then your model is no good than a stupid model which always predicted the mean value (you are actually making it worse by using Machine Learning).
 
 
 `@script`
