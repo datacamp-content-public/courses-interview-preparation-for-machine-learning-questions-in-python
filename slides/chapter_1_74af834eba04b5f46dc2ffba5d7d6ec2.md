@@ -17,7 +17,31 @@ title: Product Manager
 
 
 `@script`
-In the previous lesson, you have found out that whether your model is overfitted or not. In this lesson, we are going to learn to benchmark your model.
+In the previous lesson, you have learnt how to check for overfitting in your model. In this lesson, we are going to answer one of the basic ML Interview questions - How do you benchmark your model?
+
+
+---
+## Exercise
+
+```yaml
+type: "FullSlide"
+key: "2a96d7ae22"
+```
+
+`@part1`
+I will benchmark my model by comparing my model's RMSE with the RMSE of:
+
+a.A new model with a different set of input features {{1}} 
+
+b.A model that always predicted the average {{2}}
+
+c.A model that always predicted the correct value {{3}}
+
+d.A model that always predicted the wrong value {{4}}
+
+
+`@script`
+
 
 
 ---
@@ -275,30 +299,6 @@ To summarize, in this lesson we have learnt how you can benchmark your machine l
 1.We first build a stupid model that makes predictions without input features
 2.We then calculate the RMSE value of this stupid model.
 3.Verify whether your base model is better than this stupid model or not.
-
-
----
-## Exercise
-
-```yaml
-type: "FullSlide"
-key: "2a96d7ae22"
-```
-
-`@part1`
-I will benchmark my model by comparing my model's RMSE with the RMSE of:
-
-a.A new model with a different set of input features {{1}} 
-
-b.A model that always predicted the average {{2}}
-
-c.A model that always predicted the correct value {{3}}
-
-d.A model that always predicted the wrong value {{4}}
-
-
-`@script`
-
 
 
 ---
