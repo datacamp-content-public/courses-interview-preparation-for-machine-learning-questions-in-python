@@ -197,7 +197,7 @@ train_test_split(X, y, random_state=3)```
 
 
 `@script`
-You split the data using the same random_state value that you have used when splitting the data for your base_model. This will help us in comparing your base_model with the stupid_model.
+Step 1: You split the data into training and test data just like how you split the data while building your base_model
 
 
 ---
