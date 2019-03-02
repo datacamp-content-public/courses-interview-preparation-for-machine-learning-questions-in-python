@@ -30,7 +30,7 @@ hide_title: false
 ```
 
 `@part1`
-Interviewer:The RMSE value of your base model is 164.65. 
+Interviewer:The RMSE value of your base model is 164.637 
 ```python
 base_model_performance = train_test_eval(['temp'])
 print (base_model_performance)
@@ -46,6 +46,46 @@ Output: 164.637
 
 
 ---
+## What do you think about your model's performance?
+
+```yaml
+type: "TwoRows"
+key: "16956ca850"
+```
+
+`@part1`
+# A. My model is a good model
+
+
+`@part2`
+# B. My model is a below-average model
+
+
+`@script`
+
+
+
+---
+## Let us find out if your base model is indeed a good one or not
+
+```yaml
+type: "FullSlide"
+key: "db152dc7f4"
+```
+
+`@part1`
+```python
+rmse_base_model = train_test_eval(['temp'])
+print (rmse_base_model)
+``` 
+Output: 164.637
+
+
+`@script`
+
+
+
+---
 ## What exactly is model benchmarking?
 
 ```yaml
@@ -54,9 +94,9 @@ key: "54d7dc43dc"
 ```
 
 `@part1`
-Benchmarking a model corresponds to building a model that would predict the output in the absence of input features.
+You compare your base model's performance with that of a model that predicts the output without the help of input features.
 
-The performance of this model, a stupid model, represents the best a model can do in predicting the output without the help of input features.
+Any machine learning model you build should do better than this stupid model. This is how you benchmark your model.
 
 
 `@script`
@@ -83,6 +123,22 @@ c.A model that always predicted the correct value {{3}}
 d.A model that always predicted the wrong value {{4}}
 
 **Answer: b** {{5}}
+
+
+`@script`
+
+
+
+---
+## How can I build a model that predicts output without input features?
+
+```yaml
+type: "FullSlide"
+key: "fd5681da11"
+```
+
+`@part1`
+
 
 
 `@script`
