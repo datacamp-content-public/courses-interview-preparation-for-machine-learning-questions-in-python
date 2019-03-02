@@ -107,30 +107,6 @@ key: "5a78ebdebb"
 
 
 ---
-## Exercise
-
-```yaml
-type: "FullSlide"
-key: "2a96d7ae22"
-```
-
-`@part1`
-I will benchmark my model by comparing my model's RMSE with the RMSE of:
-
-a.A new model with a different set of input features {{1}} 
-
-b.A model that always predicted the average {{2}}
-
-c.A model that always predicted the correct value {{3}}
-
-d.A model that always predicted the wrong value {{4}}
-
-
-`@script`
-
-
-
----
 ## How to build a predictive model without features?
 
 ```yaml
@@ -208,6 +184,30 @@ key: "a325fd6176"
 Null RMSE is the RMSE of the model that always predicts the mean value for the input training samples. 
 
 In our case, we calculate null RMSE by taking the sum of the squares of difference between the average number of bikes rented per hour **(predicted value)** and the actual bikes rented per hour for all the training samples
+
+
+`@script`
+
+
+
+---
+## Exercise
+
+```yaml
+type: "FullSlide"
+key: "2a96d7ae22"
+```
+
+`@part1`
+I will benchmark my model by comparing my model's RMSE with the RMSE of:
+
+a.A new model with a different set of input features {{1}} 
+
+b.A model that always predicted the average {{2}}
+
+c.A model that always predicted the correct value {{3}}
+
+d.A model that always predicted the wrong value {{4}}
 
 
 `@script`
