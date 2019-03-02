@@ -31,13 +31,13 @@ key: "2a96d7ae22"
 `@part1`
 I will benchmark my model by comparing my model's RMSE with the RMSE of:
 
-a.A new model with a different set of input features {{1}} 
+a.A new model with a different set of input features  
 
-b.A model that always predicted the average {{2}}
+b.A model that always predicted the average 
 
-c.A model that always predicted the correct value {{3}}
+c.A model that always predicted the correct value 
 
-d.A model that always predicted the wrong value {{4}}
+d.A model that always predicted the wrong value
 
 
 `@script`
