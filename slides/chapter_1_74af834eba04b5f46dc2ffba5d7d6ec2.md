@@ -33,6 +33,8 @@ Interviewer:The RMSE value of your base model is 164.637 {{1}}
 
 **Does this RMSE value represent a good model or a below-average model?** {{2}}
 
+Let us find out by benchmarking your model! {{3}}
+
 
 `@part2`
 ![](https://assets.datacamp.com/production/repositories/4715/datasets/ec28afc57ce07e13b522943efdb57104fe8a1c7c/benchmark.jpg){{2}}
