@@ -259,7 +259,7 @@ key: "16e00dbbc0"
 `@part1`
 Now you can compare the **RMSE value of your base model** against the **null_rmse**.
 ```python
-if base_model_performance < null_rmse:
+if rmse_base_model < null_rmse:
  print('Your model is better than a stupid model')
 else:
  print('Your model is worse than a stupid model')
