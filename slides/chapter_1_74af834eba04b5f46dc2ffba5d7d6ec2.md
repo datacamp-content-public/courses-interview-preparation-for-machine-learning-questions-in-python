@@ -39,7 +39,7 @@ Interviewer:The RMSE value of your base model is 164.637 {{1}}
 
 
 `@script`
-But just how good is your model? That is what the interviewer asks. How do you interpret the RMSE value?
+Just how good is your model? That is what the interviewer asks. How do you interpret the RMSE value?
 
 
 ---
@@ -95,7 +95,7 @@ You compare the RMSE of your base model with that of a stupid model that tries t
 
 
 ---
-## How do you build this stupid model?
+## How do you build a stupid model?
 
 ```yaml
 type: "FullSlide"
@@ -107,7 +107,7 @@ key: "fd5681da11"
 
 
 `@script`
-You have to predict the total rentals without the help from input features like 'Date and time','Season', 'Weather','Humidity'
+Let us take a scenario. You have to predict the total rentals without the help from input features like 'Date and time','Season', 'Weather','Humidity'
 
 
 ---
@@ -133,7 +133,7 @@ d.Min number of bikes rented per hour {{4}}
 
 
 `@script`
-To understand how a stupid model makes predictions, let us try one for ourselves. Imagine you are trying to make predictions in the absence of input features, you have to tell the bike owner the number of bikes that are going to rented in the next hour. Which of the below estimates will you choose?
+To understand how a stupid model makes predictions, let us try one for ourselves. Imagine you are trying to make predictions in the absence of input features, you have to tell the bike owner the number of bikes that are going to rented in the next hour. Which of the below estimates will you choose? Of all these responses, mean makes more sense.
 
 
 ---
@@ -154,7 +154,7 @@ key: "6e6a7d7210"
 
 
 `@script`
-Central Tendency. Majority of the values lie around the center. As you have no input features to rely on, you choose mean as it represents the majority of observations in the output variable. For all the different time slots, you will always be predicting the mean response value.
+Central Tendency. Majority of the values lie around the center. As you have no input features to rely on, you choose mean as it represents the majority of observations in the output variable. For all the different time slots, you will always be predicting the mean response value.This is the best prediction you can make in the absence of input features.
 
 
 ---
@@ -174,11 +174,11 @@ Below are the steps to benchmark your model:
 
 3.Calculate the Null RMSE value by taking into consideration these predictions
 
-4.Verify if your base model's RMSE value is lower than Null RMSE
+4.Verify whether your base model's RMSE value is lower than Null RMSE or not
 
 
 `@script`
-Now that we know how to build a stupid model, let us lay down the steps in the process of benchmarking. You first split the data into training and test data. Calculate the Average no.of bike rentals per hour. This becomes the prediction of the stupid model. Calculate the Null RMSE value for this stupid model just the way you calculate RMSE value for any model. Finally, verify whether your base model's RMSE value is lower than Null RMSE or not. If it is lower, your model is better than this stupid model. Otherwise, it is worse than your stupid model.
+Now that we know how to build a stupid model, let us lay down the steps in the process of benchmarking. You first split the data into training and test data. Calculate the Average no.of bike rentals per hour. This becomes the prediction of the stupid model. Calculate the Null RMSE value for this stupid model just the way you calculate RMSE value for any model. Finally, verify whether your base model's RMSE value is lower than Null RMSE or not.
 
 
 ---
@@ -285,9 +285,9 @@ key: "afbf7fb867"
 `@part2`
 B. My model is a below-average model
 
-Your base model RMSE: 164.63
+Your base model RMSE: 164.63 {{1}}
 
-Null RMSE: 190.732
+Null RMSE: 190.732 {{2}}
 
 
 `@script`
@@ -305,11 +305,11 @@ key: "28f258b8d7"
 `@part1`
 In order to benchmark your model, you need to:
 
-1.Build a stupid model which predicts the average value in the absence of input features
+1.Build a stupid model which predicts the average value in the absence of input features {{1}}
 
-2.Calculate the Null RMSE for this stupid model
+2.Calculate the Null RMSE for this stupid model {{2}}
 
-3.Verify whether your base model's RMSE is above or below the Null RMSE
+3.Verify whether your base model's RMSE is above or below the Null RMSE {{3}}
 
 
 `@script`
