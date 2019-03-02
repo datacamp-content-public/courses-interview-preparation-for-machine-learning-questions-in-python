@@ -153,7 +153,7 @@ key: "6e6a7d7210"
 
 
 `@script`
-Now you must be thinking why does predicting the mean make sense?
+You must be thinking why does predicting the mean make sense?
 Central tendency. According to central tendency, majority of the values in a distribution lie around the center and in the absence of input features, a central tendency measure like mean is your best bet.This is exactly what a stupid model does. It chooses a central tendency measure like average as its prediction.
 
 
