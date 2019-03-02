@@ -157,15 +157,15 @@ key: "b00e10b99a"
 `@part1`
 Imagine you just have details about the no.of bikes rented every hour. If you are to tell the owner of the bikestore, the number of bikes that are going to be rented in the next hour, which of the below estimates might come to your rescue?
 
-a.Random Guess
+a.Random Guess {{1}}
 
-b.Average number of bikes rented per hour
+b.Average number of bikes rented per hour {{2}}
 
-c.Max number of bikes rented per hour
+c.Max number of bikes rented per hour {{3}}
 
-d.Min number of bikes rented per hour
+d.Min number of bikes rented per hour {{4}}
 
-**Answer: b **
+**Answer: b ** {{5}}
 
 
 `@script`
@@ -207,7 +207,31 @@ key: "a325fd6176"
 `@part1`
 Null RMSE is the RMSE of the model that always predicts the mean value for the input training samples. 
 
-In our case, we calculate null RMSE by taking the difference between the average number of bikes rented per hour (predicted value) and the actual bikes rented per hour
+In our case, we calculate null RMSE by taking the sum of the squares of difference between the average number of bikes rented per hour **(predicted value)** and the actual bikes rented per hour for all the training samples
+
+
+`@script`
+
+
+
+---
+## Exercise - Solution
+
+```yaml
+type: "FullSlide"
+key: "bfe4077f6e"
+```
+
+`@part1`
+I will benchmark my model by comparing my model's RMSE with the RMSE of:
+
+a.A new model with a different set of input features  
+
+**b.A model that always predicted the average **
+
+c.A model that always predicted the correct value 
+
+d.A model that always predicted the wrong value
 
 
 `@script`
