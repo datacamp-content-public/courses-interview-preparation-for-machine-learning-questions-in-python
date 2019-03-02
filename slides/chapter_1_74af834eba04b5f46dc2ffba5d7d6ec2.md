@@ -227,7 +227,7 @@ print(y_null)
 
 
 `@script`
-You initialize an array y_null and fill it with the average of the output variable in the test data for all the test samples.
+You initialize an array y_null and fill it with the average of the output variable in the test data for all the test samples.y_null represents the predictions of your stupid model.
 
 
 ---
