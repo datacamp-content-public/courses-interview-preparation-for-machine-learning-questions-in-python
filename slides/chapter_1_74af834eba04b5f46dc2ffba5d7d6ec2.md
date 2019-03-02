@@ -65,7 +65,7 @@ Let us find out by benchmarking your model! {{3}}
 
 
 `@script`
-Now the interviewer asks you a different question. Just how good is your model? Does the RMSE value represent a good model or an average model? Let us find out by model benchmarking!
+Now the interviewer asks you a different question. Just how good is your model? Does the RMSE value represent a good model or an average model? You answer this question by benchmarking your model!
 
 
 ---
@@ -120,15 +120,15 @@ key: "b00e10b99a"
 `@part1`
 If you are to tell the owner of the bikestore, the number of bikes that are going to be rented in the next hour, which of the below estimates will you choose?
 
-a.Random Guess {{1}}
+a.Random Guess 
 
-b.Average number of bikes rented per hour {{2}}
+b.Average number of bikes rented per hour 
 
-c.Max number of bikes rented per hour {{3}}
+c.Max number of bikes rented per hour 
 
-d.Min number of bikes rented per hour {{4}}
+d.Min number of bikes rented per hour 
 
-**Answer: b ** {{5}}
+**Answer: b ** {{1}}
 
 
 `@script`
@@ -221,8 +221,9 @@ y_null = np.zeros_like(y_test, dtype=float)
 
 # fill the array with the mean value of y_test
 y_null.fill(y_test.mean())
-y_null
+print(y_null)
 ```
+**Output:** [190.732,190.732,......190.732]
 
 
 `@script`
@@ -246,7 +247,7 @@ null_rmse = np.sqrt
 (metrics.mean_squared_error(y_test, y_null))
 print (null_rmse)
 ```
-Output: 190.732
+**Output:** 180.448
 
 
 `@script`
