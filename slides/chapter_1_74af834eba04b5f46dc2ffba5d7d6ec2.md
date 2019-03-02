@@ -17,7 +17,7 @@ title: Product Manager
 
 
 `@script`
-
+In the previous lesson, you have found out that your model is not overfitted.
 
 
 ---
@@ -39,7 +39,7 @@ Interviewer:The RMSE value of your base model is 164.637 {{1}}
 
 
 `@script`
-
+But just how good is your model? That is what the interviewer asks. How do you interpret the RMSE value?
 
 
 ---
@@ -63,11 +63,11 @@ A. My model is a good model {{1}}
 
 B. My model is a below-average model {{2}}
 
-Let us find out if your model is indeed a good model or not! {{3}}
+Let us find out whether your model is indeed a good model or not by benchmarking your model!!{{3}}
 
 
 `@script`
-
+164.63 is your base model's RMSE. Let us find out whether your model is indeed a good model or not by benchmarking.
 
 
 ---
@@ -91,11 +91,11 @@ key: "5a78ebdebb"
 
 
 `@script`
-
+You compare the RMSE of your base model with that of a stupid model that tries to predict the output without the help of input features. The RMSE of this stupid model is called the Null RMSE. You should always strive to ensure that your Model's RMSE is lower than the RMSE of this stupid model.
 
 
 ---
-## How to build a predictive model without features?
+## How do you build this stupid model?
 
 ```yaml
 type: "FullSlide"
@@ -107,7 +107,7 @@ key: "fd5681da11"
 
 
 `@script`
-
+You have to predict the total rentals without the help from input features like 'Date and time','Season', 'Weather','Humidity'
 
 
 ---
@@ -119,7 +119,7 @@ key: "b00e10b99a"
 ```
 
 `@part1`
-If you are to tell the owner of the bikestore, the number of bikes that are going to be rented in the next hour, which of the below estimates will you use?
+If you are to tell the owner of the bikestore, the number of bikes that are going to be rented in the next hour, which of the below estimates will you choose?
 
 a.Random Guess {{1}}
 
@@ -133,7 +133,7 @@ d.Min number of bikes rented per hour {{4}}
 
 
 `@script`
-
+To understand how a stupid model makes predictions, let us try one for ourselves. Imagine you are trying to make predictions in the absence of input features, you have to tell the bike owner the number of bikes that are going to rented in the next hour. Which of the below estimates will you choose?
 
 
 ---
@@ -154,7 +154,7 @@ key: "6e6a7d7210"
 
 
 `@script`
-For all the different time slots, you will always be predicting the mean response value.
+Central Tendency. Majority of the values lie around the center. As you have no input features to rely on, you choose mean as it represents the majority of observations in the output variable. For all the different time slots, you will always be predicting the mean response value.
 
 
 ---
@@ -170,7 +170,7 @@ Below are the steps to benchmark your model:
 
 1.Split the data into training data and test data
 
-2.Calculate the Average Number of Bikes Rented every hour for the test data. This becomes your prediction.
+2.Calculate the Average Number of Bikes Rented every hour for the test data. This becomes the prediction of the stupid model.
 
 3.Calculate the Null RMSE value by taking into consideration these predictions
 
@@ -178,7 +178,7 @@ Below are the steps to benchmark your model:
 
 
 `@script`
-
+Now that we know how to build a stupid model, let us lay down the steps in the process of benchmarking. You first split the data into training and test data. Calculate the Average no.of bike rentals per hour. This becomes the prediction of the stupid model. Calculate the Null RMSE value for this stupid model just the way you calculate RMSE value for any model. Finally, verify whether your base model's RMSE value is lower than Null RMSE or not. If it is lower, your model is better than this stupid model. Otherwise, it is worse than your stupid model.
 
 
 ---
@@ -197,7 +197,7 @@ train_test_split(X, y, random_state=3)```
 
 
 `@script`
-
+We are maintaining the same random_state value to compare how the stupid model performs compared to your base_model.
 
 
 ---
@@ -221,7 +221,7 @@ y_null
 
 
 `@script`
-
+Here we initialize an array y_null and fill it with the average number of bikes rented per hour value for all the test data points.
 
 
 ---
@@ -233,7 +233,6 @@ key: "fff65c249c"
 ```
 
 `@part1`
-Now let us calculate the RMSE value of this stupid model which always predicts the output to be the mean number of bikes rented.
 ```python
 # fill the array with the mean value of y_test
 y_null.fill(y_test.mean())
@@ -246,7 +245,7 @@ Output: 190.732
 
 
 `@script`
-**null_rmse** represents how well(bad!) the model would be behaving in the absence of input variables
+Now let us calculate the RMSE value of this stupid model which always predicts the output to be the mean number of bikes rented. null_rmse represents how well(bad!) the model would be behaving in the absence of input variables
 
 
 ---
@@ -292,7 +291,7 @@ Null RMSE: 190.732
 
 
 `@script`
-
+Coming back to the question at the start of the lesson, is your model good or bad, we find the null rmse value to 190.732 and since your base_model rmse is less than that of null rmse, you can proudly conclude that your model is a good model.
 
 
 ---
@@ -314,7 +313,7 @@ In order to benchmark your model, you need to:
 
 
 `@script`
-
+To summarize, for benchmarking any machine learning model you build, you first need to build a stupid model that always predicts the output to be the mean value. Calculate the Null RMSE for this model. And then verify whether your base model's RMSE is above or below the Null RMSE. If it is below, your model is a really good model. If it is above, then your model is not so great and you need to go back to the drawing board to better it.
 
 
 ---
