@@ -271,16 +271,15 @@ Now let us calculate the RMSE value of this stupid model which always predicts t
 # fill the array with the mean value of y_test
 y_null.fill(y_test.mean())
 # compute null RMSE
-null_rmse = np.sqrt(metrics.mean_squared_error(y_test, y_null))
+null_rmse = np.sqrt
+(metrics.mean_squared_error(y_test, y_null))
 print (null_rmse)
 ```
 Output: 190.732
 
-**null_rmse** represents how well(bad!) the model would be behaving in the absence of input variables
-
 
 `@script`
-
+**null_rmse** represents how well(bad!) the model would be behaving in the absence of input variables
 
 
 ---
@@ -299,11 +298,10 @@ if base_model_performance < null_rmse:
 else:
  print('Your model is worse than a stupid model')
 ```
-> If the base model RMSE is **more than that** of null_error, then your model is no good than a stupid model which always predicted the mean value (you are actually making it worse by using Machine Learning).
 
 
 `@script`
-
+If the base model RMSE is **more than that** of null_error, then your model is no good than a stupid model which always predicted the mean value (you are actually making it worse by using Machine Learning).
 
 
 ---
@@ -341,7 +339,7 @@ key: "28f258b8d7"
 `@part1`
 In order to benchmark your model, you need to:
 
-1.Build a stupid model which makes predictions in the absence of input features
+1.Build a stupid model which predicts the average value in the absence of input features
 
 2.Calculate the Null RMSE for this stupid model
 
