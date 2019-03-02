@@ -24,21 +24,18 @@ title: Product Manager
 ## How do you benchmark the model you have built?
 
 ```yaml
-type: "FullSlide"
-key: "4668c301c5"
-hide_title: false
+type: "TwoColumns"
+key: "84f6b5b099"
 ```
 
 `@part1`
 Interviewer:The RMSE value of your base model is 164.637 
-```python
-base_model_performance = train_test_eval(['temp'])
-print (base_model_performance)
-``` 
-Output: 164.637
 
-- Does the above RMSE value represent a good model or a below-average model? {{1}}
-- How do you benchmark it? {{2}}
+**Does this RMSE value represent a good model or a below-average model?**
+
+
+`@part2`
+![](https://assets.datacamp.com/production/repositories/4715/datasets/ec28afc57ce07e13b522943efdb57104fe8a1c7c/benchmark.jpg)
 
 
 `@script`
@@ -130,7 +127,7 @@ d.A model that always predicted the wrong value {{4}}
 
 
 ---
-## How can I build a model that predicts output without input features?
+## How to build a predictive model without features?
 
 ```yaml
 type: "FullSlide"
@@ -138,7 +135,7 @@ key: "fd5681da11"
 ```
 
 `@part1`
-![]()
+![](https://assets.datacamp.com/production/repositories/4715/datasets/de426914547a8980eddb150374b758d26553d0ee/output.png)
 
 
 `@script`
