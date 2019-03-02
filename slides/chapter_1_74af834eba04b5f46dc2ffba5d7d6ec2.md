@@ -41,7 +41,7 @@ d.A model that always predicted the wrong value
 
 
 `@script`
-
+Choose an option and I will reveal the answer at the end of the lesson.
 
 
 ---
@@ -65,7 +65,7 @@ Let us find out by benchmarking your model! {{3}}
 
 
 `@script`
-Now the interviewer asks you a different question. Just how good is your model? Does the RMSE value represent a good model or an average model? You answer this question by benchmarking your model!
+The interviewer looks at the RMSE value of your base model and asks "Just how good is your model? Does the RMSE value represent a good model or an average model?"" You answer this question by benchmarking your model!
 
 
 ---
@@ -298,7 +298,7 @@ d.A model that always predicted the wrong value
 
 
 `@script`
-
+This is the answer to the question at the start of the lecture.
 
 
 ---
