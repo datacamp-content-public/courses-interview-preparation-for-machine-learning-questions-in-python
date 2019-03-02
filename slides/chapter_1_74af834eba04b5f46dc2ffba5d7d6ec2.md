@@ -46,6 +46,24 @@ Output: 164.637
 
 
 ---
+## What exactly is model benchmarking?
+
+```yaml
+type: "FullSlide"
+key: "54d7dc43dc"
+```
+
+`@part1`
+Benchmarking a model corresponds to building a model that would predict the output in the absence of input features.
+
+The performance of this model, a stupid model, represents the best a model can do in predicting the output without the help of input features.
+
+
+`@script`
+
+
+
+---
 ## Exercise
 
 ```yaml
@@ -72,17 +90,16 @@ d.A model that always predicted the wrong value {{4}}
 
 
 ---
-## What exactly is model benchmarking?
+## A question for you
 
 ```yaml
 type: "FullSlide"
-key: "54d7dc43dc"
+key: "41cb40e812"
+hide_title: false
 ```
 
 `@part1`
-Benchmarking a model corresponds to understanding how a model would predict the output in the absence of input features.
-
-The performance of this model, a stupid model, represents the best a model can do in predicting the output without the help of input features.
+# How should a model predict the hourly bikes rented when there are no input features?
 
 
 `@script`
@@ -90,7 +107,7 @@ The performance of this model, a stupid model, represents the best a model can d
 
 
 ---
-## Scenario
+## Consider this scenario
 
 ```yaml
 type: "FullSlide"
@@ -164,7 +181,7 @@ Below are the steps:
 
 1.Split the data into training data and test data
 
-2.Calculate the Average Number of Bikes Rented every Hour for the test data. This becomes your prediction.
+2.Calculate the Average Number of Bikes Rented every hour for the test data. This becomes your prediction.
 
 3.Calculate the Null RMSE value by taking into consideration these predictions
 
