@@ -123,7 +123,7 @@ key: "fd5681da11"
 
 
 ---
-## Consider this scenario
+## Making a prediction in the absence of input features
 
 ```yaml
 type: "FullSlide"
@@ -131,7 +131,7 @@ key: "b00e10b99a"
 ```
 
 `@part1`
-Imagine you just have details about the no.of bikes rented every hour. If you are to tell the owner of the bikestore, the number of bikes that are going to be rented in the next hour, which of the below estimates might come to your rescue?
+If you are to tell the owner of the bikestore, the number of bikes that are going to be rented in the next hour, which of the below estimates might come to your rescue?
 
 a.Random Guess {{1}}
 
@@ -157,11 +157,11 @@ key: "6e6a7d7210"
 ```
 
 `@part1`
-- In this situation,predicting the mean makes a lot of sense. Why?
+- In this situation,predicting the output to be the average number of bikes rented per hour makes a lot of sense. {{1}}
 
-- Central Tendency states that majority of values in a distribution lie around the center. 
+- Why? {{2}}
 
-- So, you recommend the average number of bikes to the bikestore owner when you do not have any input features at your disposal.
+- Central Tendency states that majority of values in a distribution lie around the center. {{3}}
 
 
 `@part2`
@@ -183,55 +183,7 @@ key: "a325fd6176"
 `@part1`
 Null RMSE is the RMSE of the model that always predicts the mean value for the input training samples. 
 
-In our case, we calculate null RMSE by taking the sum of the squares of difference between the average number of bikes rented per hour **(predicted value)** and the actual bikes rented per hour for all the training samples
-
-
-`@script`
-
-
-
----
-## Exercise
-
-```yaml
-type: "FullSlide"
-key: "2a96d7ae22"
-```
-
-`@part1`
-I will benchmark my model by comparing my model's RMSE with the RMSE of:
-
-a.A new model with a different set of input features {{1}} 
-
-b.A model that always predicted the average {{2}}
-
-c.A model that always predicted the correct value {{3}}
-
-d.A model that always predicted the wrong value {{4}}
-
-
-`@script`
-
-
-
----
-## Exercise - Solution
-
-```yaml
-type: "FullSlide"
-key: "bfe4077f6e"
-```
-
-`@part1`
-I will benchmark my model by comparing my model's RMSE with the RMSE of:
-
-a.A new model with a different set of input features  
-
-**b.A model that always predicted the average **
-
-c.A model that always predicted the correct value 
-
-d.A model that always predicted the wrong value
+![](https://assets.datacamp.com/production/repositories/4715/datasets/aed6d82369d2c4054c747d8764dd5b829784187e/nullrmse.png) {{1}}
 
 
 `@script`
@@ -394,6 +346,54 @@ In order to benchmark your model, you need to:
 2.Calculate the Null RMSE for this stupid model
 
 3.Verify whether your base model's RMSE is above or below the Null RMSE
+
+
+`@script`
+
+
+
+---
+## Exercise
+
+```yaml
+type: "FullSlide"
+key: "2a96d7ae22"
+```
+
+`@part1`
+I will benchmark my model by comparing my model's RMSE with the RMSE of:
+
+a.A new model with a different set of input features {{1}} 
+
+b.A model that always predicted the average {{2}}
+
+c.A model that always predicted the correct value {{3}}
+
+d.A model that always predicted the wrong value {{4}}
+
+
+`@script`
+
+
+
+---
+## Exercise - Solution
+
+```yaml
+type: "FullSlide"
+key: "bfe4077f6e"
+```
+
+`@part1`
+I will benchmark my model by comparing my model's RMSE with the RMSE of:
+
+a.A new model with a different set of input features  
+
+**b.A model that always predicted the average **
+
+c.A model that always predicted the correct value 
+
+d.A model that always predicted the wrong value
 
 
 `@script`
