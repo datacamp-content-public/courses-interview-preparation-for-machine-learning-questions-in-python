@@ -34,94 +34,128 @@ What analogies or heuristics will you use?
 
 Chapter 1: 
 
-Model Improvement: You can provide a better solution to a problem only if you truly understand the problem. That is exactly what we are going to cover as part of this course. You are going to come up with a better model by understanding the given model.
+Regression vs Classification: If somebody is particularly asking about the marks you obtained in the exam, then they are interested in 'Regression' problem. If they are only interested in whether you passed or failed, then they are looking at a 'Classification' problem. You need to understand what they are interested in, before you give out your response. Similarly, you need to understand the type of problem you are dealing with, before deciding the approach towards solving that problem. 
 
-Regression and Classification problems:
 
-Feature Engineering:
+Model Improvement: You are given the responsibility of making a student better through training. What is the first thing you should do? You cannot randomly start teaching him everything you know. You first need to analyze the performance of a student, identify his strengths and weaknesses and then come up with a plan to improve his performance. That is exactly what you need to do while improving an existing model. You need to first understand how the model was built, why certain features are selected, benchmark the performance of the model and then set about improving its performance.  
 
-Feature Selection:
+Feature Engineering: Say, you are planning to go to your friend's house. You will go only if your friend's house is within a reasonable distance. You called him up and asked for the distance and he said "The latitude location of my house is 23.6 and the longitude location is 31.2". Can you really make up your mind as to whether visit your friend or not by using these coordinates? Stand-alone, each of those attributes is not going to help you. Can your friend do better? Imagine, he calculated the distance between both houses using these coordinates. That will give you exactly the information you need to make your decision. Just like how the 'Distance' feature which was engineered from the 'Latitude' and 'Longitude' features, helped you in making a better decision, in machine learning too, you can improve the performance of a model by engineering a new feature that makes sense.
+
+Feature Selection: Say, you want to predict the salary of an employee in your organization. You have features like Gender, Age, Work Experience. If all of them are female, does the 'Gender' feature really matter? 
 
 Chapter 2:
 
-Overfitting: A student who performs well during classroom discussions but fails miseably during the exam.
+Overfitting: A overfitted model is like a student who performs well during classroom discussions but fails miseably during the exam.
 
-RMSE:
+RMSE: Root Mean Square Error is like the metric that you use to how well the student has peformed in a test that contains questions that he has not seen earlier. You use this metric, when you want to punish the student for committing more mistakes while answering the most difficult questions in the exam compared to answering the easier questions in the exam.
 
-MAE:
+MAE: It is similar to RMSE except that here, you punish the student equally irrespective of the difficulty of the question.
 
-R-Square:
+R-Square: It kind of tells how well a student has prepared for the exam. You use to evaluate how good is the 'Best Fit Line' on training data.
 
-Null RMSE:
+Null RMSE: It is the RMSE value of a stupid model that makes predictions without any input data. 
 
-Benchmarking:
+Benchmarking: Benchmarking is the process of quantifying how good you really are by comparing with a standard. This standard in the case of a 'Machine Learning' model would be 'Null Error'
 
 Chapter 3:
 
-Decision Tree 
+Decision Tree : It is similar to the approach you follow to decide the company you want to join. You make a series of decisions, first you decide whether the package offered is more or less compared to your current job. Then you decide whether the job is in your hometown or in a different city. Then, you decide whether the work culture in that company is good or bad. You finally make your decision, by considering all these factors (package,location,work culture). This is exactly what a decision tree represents - a series of decisions that will help you make the right prediction. 
 
-Information Gain 
+Information Gain : Among the multitude of decisions that you are faced with, how are you going to decide the order in which you need to take these decisions? You will first take the decision that results in the maximum information gain. For example, if work culture is the most important parameter for you, then you eliminate the companies that have bad work culture first and then proceed onto those companies with good work culture. Now that you have gained more clarity in your choice of a company, you proceed further to evaluate the salary offerings by the prospective companies. Similarly, a decision tree also considers features based on the information gain attributed to that feature.
 
-Entropy 
+Entropy: Entropy is a measure to quantify how confused you were when you had to consider all these multiple factors (work culture, package,location) while deciding your new job. Just like how you would be systematically evaluating all these factors based on the information gained and reduce confusion while making your final decision, a decision tree also considers features in a way that the entropy value decreases as we build the tree. 
 
-Confusion Matrix
+Confusion Matrix: How do you evaluate how well you performed in an exam that contains two types of questions - hard and easy? You need to see the actual answers and the answers given by you.Similarly, a confusion matrix also lays out your responses to both the hard and easy questions along with how accurate you are with your predictions. 
 
-Accuracy 
+Accuracy : How many questions did the student answered correctly out of the total no.of questions?
 
-Sensitivity 
+Sensitivity/Recall: Out of all the hard questions, how many did the student answer correctly?
 
-Specificity 
+Specificity: Out of all the easy questions, how many did the student answer correctly?
 
-Pre-pruning 
+Precision: When a student answers a hard question, how often is he correct?
 
-Post-pruning 
+Pre-pruning: Say, you are considering close to 15 factors for deciding which company you want to join. There are frankly more than 3000 combinations of these factors you can think of. Sounds scary, isn't it? How can you overcome this 'Death by choices' scenario? You restrict the number of combinations, say I will consider only 5-10 combinations. That is exactly what pre-pruning does to a decision tree. It puts a cap on the number of branches a decision tree can have.
 
-Random Forests 
+Post-pruning: Say, if you have all the time in the world to make a decision about the company you want to join, then you can evaluate all possible combinations of factors and then eliminate those paths that do not make any sense. This is what we mean by post-pruning a decision tree where we allow the decision tree to be constructed before cutting the unwanted branches. 
 
-Hyperparameter tuning 
+Random Forest: When you are faced with the prospect of choosing the company you want to join, will you be considering a single person's opinion or the opinion of multiple people? You usually check with your friends, colleagues, family etc. Why? Can't you just go with a single person's opinion? We do not usually just take a decision based on a single person's input because we know that his opinion can be biased. We consider multiple people's opinions to ensure that we are not making biased decisions. Similarly, a random forest algorithm constructs not one decision tree, but many many decision trees (hundreds of them) to help classify a sample.  
 
-Ensemble Learning
+Parameter tuning: How does a mathematics teacher improve his teaching skills? By fine-tuning his usage of examples, his delivery of subject matter, empathizing with the students, adapting to the demands of the class etc. This is exactly what parameter tuning means. Just like the teacher, a model can also be improved by fine-tuning its parameters.  
+
+Ensemble Learning: Just like how a great movie has contribution from all its cast members an ensemble learning algorithm has contribution from a combination of models. Random Forest is an ensemble learning technique that takes inputs from a collection of decision trees before predicting the output.
 
 Chapter 4: 
+ 
+Bag-of-words: Say, you want to communicate with someone who understands only numbers. You speak text and they understand numbers. One way to solve this communication gap is to assign numbers to all the words you know and assign these values to the words in your sentences. Because the other person is good with numbers, he will make the necessary mappings and understand what you are trying to say. This is what 'Bag-of-words' technique means.   
 
-Word2Vec 
+TF-IDF Score: TF-IDF corresponds to assigning a score based on the importance of a word rather than the frequency of appearance of a word. Supposed, if the words 'The' and 'Nadal' are repeating the same number of times in a document, the word 'Nadal' provides more context about the type of document (it is a sports document) than the word 'the', since 'the' appears in pretty much every document about every sport in the world.
 
-Bag-of-words 
+N-grams:N-grams is similar to bag-of-words except that it maintains the order of words, which if you look at it, is pretty important while making sense of any statement.
 
-N-grams 
+Probability: If you throw a coin 100 times, how many times do you think it shows up as a head? 50. Why? Because, there is always an equal chance that whenever a throw a coin, it can show up as a head or tail. Probability is nothing but the ratio of the outcomes you are interested in, in our case number of heads, to the all possible outcomes.  
 
-Probability 
+Logistic Regression: Imagine you are given the task of analyzing loan applications and deciding which applications to reject and which applications to accept. What kind of information do you need to take this decision? If someone can give you a probability of default for every loan application, wouldn't your life be so much easy? That is exactly what a Logistic Regression model does. It takes into account the input features and outputs a probability value that represents the chance that a sample belongs to a particular class. 
 
-Logistic Regression
+Class Imbalance: Say, you are blind-folded and have to classify two types of swans in a group of 100 swans. 95 of them are white swans and only 5 of them are black swans. You used your intelligence like analyzing the sounds made by swans, trajectory patterns etc and had 95% accuracy in your predictions. But did you really do well? If you look at it, even if you randomly made predictions, you will select a white swan 95 out of 100 times. The hardest part is to identify the 5 black swans. This is what we call as 'Class Imbalance'. 
 
-Class Imbalance 
-
-Sigmoid Function
+Sigmoid Function: Do you remember how your grades are always on the scale 1-4 even though your exam marks are in the range of 100 or 1000? Your grades are obtained by standardizing your exam scores. Why was it done? It would be easier to compare grades than actual marks as different students might take different tests - some tests score out of 100, some of them score out of 1000. Similarly, sigmoid function transforms numerical values to probabilities whose values lie between 0 and 1. 
 
 
 What mistakes or misconceptions do you expect?
 
-It is easy to identify a regression problem from a classification problem
+The approach towards feature selection is the same - irrespective of whether the problem is a regression problem or a classification problem
 
 You can only improve a model by trying a different algorithm
 
 You can only choose an algorithm by trial-and-error method
 
-Accuracy is the only metric that makes sense for a given business problem
+Accuracy is the only metric that makes sense for any given business problem
 
-Overfitting can be easily prevented by taking less training data
+Overfitting can be easily prevented by taking less training data or choosing a different algorithm
 
-One can just use frequencies of words to convert text into numberical values
+One can just use frequencies of words to convert text into numerical values
+
+Feature Scaling is needed for Decision Tree models
+
+In order to benchmark a model, you need to refer to pre-defined industry standard metrics for accuracy, rmse etc
+
+Feature Engineering is creating new features that may not be based on the input features
+
+Parameter tuning will not significantly improve the performance of a model
+
+Text-classification problems seem to be approached the same way as any other classification problem
+
+Evaluating a text-classification model is the same as that of evaluating any other classification problem
+
+If somebody asks to dissect/describe a model, we only need to focus on the algorithm used and the accuracy of the model 
+
+Feature Selection and Feature Engineering are not so important as algorithm selection
+
+You just randomly try different combinations of features and algorithms and eventually you will stumble across an accurate model
+
+How the model performs on training data is more important than how it performs on unseen data
 
 What datasets will you use?
 
-Bike Prediction Dataset
-Telecom user churn
-SMS message classification
+Bike Prediction Dataset:https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset#
+Classifying Senators to be Democrat or Republican: https://archive.ics.uci.edu/ml/machine-learning-databases/voting-records/house-votes-84.names
+SMS Message Classification: https://archive.ics.uci.edu/ml/datasets/sms+spam+collection
+Optional Datasets:
+Predicting the Salary levels:https://www.kaggle.com/eltonpaes/adult-salary-prediction/data 
+Predicting NYC Tax Duration:https://www.kaggle.com/c/nyc-taxi-trip-duration/data
+Predicting the movie genre based on plot: https://www.kaggle.com/aminejallouli/genre-classification-based-on-wiki-movies-plots
 
 Step 2:Who is this Course for?
 
-Advanced Alex
+The course is structured to simulate the actual machine learning interview experience for students who fit the description of 'Advanced Alex'. Students will be asked to analyze and improve an existing model. Instructor lectures will be providing feedback to the students on their choices and results.The objective for the students is to improve the existing model by leveraging the techniques described in the course.
+
+*Course Requirements:*
+
+1.Course is for students (Advanced Alex) who have gone through other Machine Learning tracks and are preparing for interviews.
+2.Students are expected to have good knowledge of Pandas, sklearn, Nltk, Numpy and Seaborn packages
+3.Students are expected to know the steps to build the basic Linear Regression, Logistic Regression, Decision Tree and Random Forest models
+
 
 Step 3:Course Outline
 
