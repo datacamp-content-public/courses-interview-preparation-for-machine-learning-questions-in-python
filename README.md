@@ -4,17 +4,29 @@ Step 1: Brainstorming
 What problem(s) will students learn how to solve?
 
 How can you improve a 'Linear Regression' model to correctly predict the number of bikes rented in an hour?
+
 How can you improve a 'Decision Tree' to accurately predict whether a customer is going to churn or not?
+
 How can you improve a 'Logistic Regression' model to accurately classify SMS messages to Spam or ham?
+
 How do you benchmark a 'Linear Regression' model?
+
 How do you benchmark a 'Decision Tree' model?
+
 How do you benchmark a 'Logistic Regression' model?
+
 How can you convert input text into numerical values and perform text classification?
+
 How to choose a metric that fits the business problem?
+
 How to choose between different word vectorization methods?
+
 How to breakdown a Linear Regression/Decision Tree/Logistic Regression Model?
+
 How to choose between a 'Decision Tree' and 'Random Forest' algorithm for building a model?
+
 How to overcome the problem of overfitting during the training phase?
+
 How to differentiate between Regression and Classification problems?
 
 What are the learning objectives of the course?
